@@ -158,3 +158,10 @@ ul#computador_escolha li a.selecionado {
   margin: 40px 0;
   padding: 15px;
 }
+
+#voltar a img{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  max-width: 50px;
+}
