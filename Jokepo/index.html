@@ -4,161 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>GAME</title>
-  </head>
-  <body>
-    <div id="principal">
-      <h1 id="titulo">Pedra, Papel e Tesoura</h1>
-      <div id="placar">
-        <div id="jogador">
-          <h2 id="jogador_nome">Vitor</h2>
-          <span id="jogador_pontos">0</span>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https: //fonts.googleapis.com/css2? family= Poppins & display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>GAME</title>
+      </head>
+      <body>
+        <div id="principal">
+          <h1 id="titulo">Jokenpô</h1>
+          <div id="paleta">
+            <div onclick="mudaCor('#be2edd')" class="caixa" id="pink"></div>
+            <div onclick="mudaCor('#6ab04c')" class="caixa" id="green"></div>
+            <div onclick="mudaCor('#535c68')" class="caixa" id="gray"></div>
 
-          <ul id="jogador_escolha">
-            <li>
-              <a id="jogador_escolha_1" onclick="jogar(1)"
-                ><img class="icon" src="../imagens/pedral.png" alt="pedra"
-              /></a>
-            </li>
-            <li>
-              <a id="jogador_escolha_2" onclick="jogar(2)"
-                ><img class="icon" src="../imagens/mao-aberta.png" alt="papel"
-              /></a>
-            </li>
-            <li>
-              <a id="jogador_escolha_3" onclick="jogar(3)"
-                ><img class="icon" src="../imagens/tesoura.png" alt="tesoura"
-              /></a>
-            </li>
-          </ul>
+            <div onclick="mudaCor('#22a6b3')" class="caixa" id="ice"></div>
+            <div onclick="mudaCor('#f9ca24')" class="caixa" id="turbo"></div>
+            <div onclick="mudaCor('#40407a')" class="caixa" id="roxo"></div>
+            <div onclick="mudaCor('#ff5252')" class="caixa" id="red"></div>
+            <div onclick="mudaCor('#33d9b2')" class="caixa" id="verdeCeleste"></div>
+            <div onclick="mudaCor('#ffb142')" class="caixa" id="sorvete"></div>
+            <div onclick="mudaCor('#18dcff')" class="caixa" id="azulNeon"></div>
+            <div onclick="mudaCor('#3d3d3d')" class="caixa" id="baltico"></div>
+            <div onclick="mudaCor('#7158e2')" class="caixa" id="lilas"></div>
+            <div onclick="mudaCor('#fff200')" class="caixa" id="amarelo"></div>
+            <div onclick="mudaCor('#ff3838')" class="caixa" id="red"></div>
+
+
+          </div> 
+          <div id="placar">
+            <div id="jogador">
+              <h2 id="jogador_nome">Vitor</h2>
+              <span id="jogador_pontos">0</span>
+
+              <ul id="jogador_escolha">
+                <li>
+                  <a id="jogador_escolha_1" onclick="jogar(1)"
+                    ><img class="icon" src="../imagens/pedral.png" alt="pedra"
+                  /></a>
+                </li>
+                <li>
+                  <a id="jogador_escolha_2" onclick="jogar(2)"
+                    ><img
+                      class="icon"
+                      src="../imagens/mao-aberta.png"
+                      alt="papel"
+                  /></a>
+                </li>
+                <li>
+                  <a id="jogador_escolha_3" onclick="jogar(3)"
+                    ><img
+                      class="icon"
+                      src="../imagens/tesoura.png"
+                      alt="tesoura"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div id="versus">VS</div>
+            <div id="computador">
+              <h2 id="computador_nome">Computador</h2>
+              <span id="computador_pontos">0</span>
+
+              <ul id="computador_escolha">
+                <li>
+                  <a id="computador_escolha_1"
+                    ><img class="icon" src="../imagens/pedral.png" alt="pedra"
+                  /></a>
+                </li>
+                <li>
+                  <a id="computador_escolha_2"
+                    ><img
+                      class="icon"
+                      src="../imagens/mao-aberta.png"
+                      alt="papel"
+                  /></a>
+                </li>
+                <li>
+                  <a id="computador_escolha_3"
+                    ><img
+                      class="icon"
+                      src="../imagens/tesoura.png"
+                      alt="tesoura"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="mensagens">....</div>
         </div>
-        <div id="versus">VS</div>
-        <div id="computador">
-          <h2 id="computador_nome">Vitor</h2>
-          <span id="computador_pontos">0</span>
 
-          <ul id="computador_escolha">
-            <li>
-              <a id="computador_escolha_1"
-                ><img class="icon" src="../imagens/pedral.png" alt="pedra"
-              /></a>
-            </li>
-            <li>
-              <a id="computador_escolha_2"
-                ><img class="icon" src="../imagens/mao-aberta.png" alt="papel"
-              /></a>
-            </li>
-            <li>
-              <a id="computador_escolha_3"
-                ><img class="icon" src="../imagens/tesoura.png" alt="tesoura"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div id="mensagens">mensagens....</div>
-    </div>
+        <script src="./script.js"></script>
+      </body>
+    </html>
 
-    <script>
-      var jogador_escolha = 0;
-      var computador_escolha = 0;
-      var jogadorPontuacao = 0;
-      var computadorPontuacao = 0
-
-      var ganhador = -1;
-
-      function jogar(escolha) {
-        jogador_escolha = escolha;
-
-        computador_escolha = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-        // 1 - pedra
-        // 2 - papel
-        /// 3 - tesoura
-        if (jogador_escolha == 1 && computador_escolha == 1) {
-          ganhador = 0
-        }
-       else if (jogador_escolha == 1 && computador_escolha == 2) {
-          ganhador = 2
-        }
-        else if (jogador_escolha == 1 && computador_escolha == 3) {
-          ganhador = 1
-        }
-
-
-      
-        else if (jogador_escolha == 2 && computador_escolha == 1) {
-          ganhador = 1
-        }
-
-      
-        else if (jogador_escolha == 2 && computador_escolha == 2) {
-          ganhador = 0
-        }
-
-      
-        else if (jogador_escolha == 2 && computador_escolha == 3) {
-          ganhador = 2
-        }
-
-
-        
-
-
-
-
-
-        else if (jogador_escolha == 3 && computador_escolha == 1) {
-          ganhador = 2
-        }
-
-      
-        else if (jogador_escolha == 3 && computador_escolha == 2) {
-          ganhador = 1
-        }
-
-      
-        else if (jogador_escolha == 3 && computador_escolha == 3) {
-          ganhador = 0
-        }
-
-        document.getElementById("jogador_escolha_1").classList.remove("selecionado");
-        document.getElementById("jogador_escolha_2").classList.remove("selecionado");
-        document.getElementById("jogador_escolha_3").classList.remove("selecionado");
-
-        document.getElementById("computador_escolha_1").classList.remove("selecionado");
-        document.getElementById("computador_escolha_2").classList.remove("selecionado");
-        document.getElementById("computador_escolha_3").classList.remove("selecionado");
-
-
-
-
-        document.getElementById("jogador_escolha_" + jogador_escolha).classList.add("selecionado");
-        document.getElementById("computador_escolha_" + computador_escolha).classList.add("selecionado");
-
-       
-        if(ganhador == 0){
-        document.getElementById("mensagens").innerHTML ='empate';
-
-        }
-        else if(ganhador == 1){
-        document.getElementById("mensagens").innerHTML ='Jogador ganhou';
-        jogadorPontuacao++
-
-
-        }
-
-        else if(ganhador == 2){
-        document.getElementById("mensagens").innerHTML ='computador ganhou';
-        computadorPontuacao++
-
-
-        }
-        document.getElementById("jogador_pontos").innerHTML = jogadorPontuacao;
-        document.getElementById("computador_pontos").innerHTML = computadorPontuacao;
-
-
-      }
-    </script>
-  </body>
-</html>
+   
