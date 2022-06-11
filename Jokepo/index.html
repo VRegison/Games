@@ -1,105 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https: //fonts.googleapis.com/css2? family= Poppins & display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./style.css" />
-        <title>Jokenpô</title>
-      </head>
-      <body>
-        <div id="principal">
-          <span id="voltar"><a href="../index.html"><img src="../imagens/volte.png" alt=""></a></span>
-          <h1 id="titulo">Jokenpô</h1>
-          <div id="paleta">
-            <div onclick="mudaCor('#be2edd')" class="caixa" id="pink"></div>
-            <div onclick="mudaCor('#6ab04c')" class="caixa" id="green"></div>
-            <div onclick="mudaCor('#535c68')" class="caixa" id="gray"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jokenpô</title>
+  </head>
+  <body>
+    <div id="principal">
+      <span id="voltar"
+        ><a href="../index.html"><img src="../imagens/volte.png" alt="" /></a
+      ></span>
+      <h1 id="titulo">Jokenpô</h1>
+      <div id="paleta">
+        <div onclick="mudaCor('#be2edd')" class="caixa" id="pink"></div>
+        <div onclick="mudaCor('#6ab04c')" class="caixa" id="green"></div>
+        <div onclick="mudaCor('#535c68')" class="caixa" id="gray"></div>
 
-            <div onclick="mudaCor('#22a6b3')" class="caixa" id="ice"></div>
-            <div onclick="mudaCor('#f9ca24')" class="caixa" id="turbo"></div>
-            <div onclick="mudaCor('#40407a')" class="caixa" id="roxo"></div>
-            <div onclick="mudaCor('#ff5252')" class="caixa" id="red"></div>
-            <div onclick="mudaCor('#33d9b2')" class="caixa" id="verdeCeleste"></div>
-            <div onclick="mudaCor('#ffb142')" class="caixa" id="sorvete"></div>
-            <div onclick="mudaCor('#18dcff')" class="caixa" id="azulNeon"></div>
-            <div onclick="mudaCor('#3d3d3d')" class="caixa" id="baltico"></div>
-            <div onclick="mudaCor('#7158e2')" class="caixa" id="lilas"></div>
-            <div onclick="mudaCor('#fff200')" class="caixa" id="amarelo"></div>
-            <div onclick="mudaCor('#ff3838')" class="caixa" id="red"></div>
+        <div onclick="mudaCor('#22a6b3')" class="caixa" id="ice"></div>
+        <div onclick="mudaCor('#f9ca24')" class="caixa" id="turbo"></div>
+        <div onclick="mudaCor('#40407a')" class="caixa" id="roxo"></div>
+        <div onclick="mudaCor('#ff5252')" class="caixa" id="red"></div>
+        <div onclick="mudaCor('#33d9b2')" class="caixa" id="verdeCeleste"></div>
+        <div onclick="mudaCor('#ffb142')" class="caixa" id="sorvete"></div>
+        <div onclick="mudaCor('#18dcff')" class="caixa" id="azulNeon"></div>
+        <div onclick="mudaCor('#3d3d3d')" class="caixa" id="baltico"></div>
+        <div onclick="mudaCor('#7158e2')" class="caixa" id="lilas"></div>
+        <div onclick="mudaCor('#fff200')" class="caixa" id="amarelo"></div>
+        <div onclick="mudaCor('#ff3838')" class="caixa" id="red"></div>
+      </div>
+      <div id="placar">
+        <div id="jogador">
+          <h2 id="jogador_nome">Vitor</h2>
+          <span id="jogador_pontos">0</span>
 
-
-          </div> 
-          <div id="placar">
-            <div id="jogador">
-              <h2 id="jogador_nome">Vitor</h2>
-              <span id="jogador_pontos">0</span>
-
-              <ul id="jogador_escolha">
-                <li>
-                  <a id="jogador_escolha_1" onclick="jogar(1)"
-                    ><img class="icon" src="../imagens/pedral.png" alt="pedra"
-                  /></a>
-                </li>
-                <li>
-                  <a id="jogador_escolha_2" onclick="jogar(2)"
-                    ><img
-                      class="icon"
-                      src="../imagens/mao-aberta.png"
-                      alt="papel"
-                  /></a>
-                </li>
-                <li>
-                  <a id="jogador_escolha_3" onclick="jogar(3)"
-                    ><img
-                      class="icon"
-                      src="../imagens/tesoura.png"
-                      alt="tesoura"
-                  /></a>
-                </li>
-              </ul>
-            </div>
-            <div id="versus">VS</div>
-            <div id="computador">
-              <h2 id="computador_nome">Computador</h2>
-              <span id="computador_pontos">0</span>
-
-              <ul id="computador_escolha">
-                <li>
-                  <a id="computador_escolha_1"
-                    ><img class="icon" src="../imagens/pedral.png" alt="pedra"
-                  /></a>
-                </li>
-                <li>
-                  <a id="computador_escolha_2"
-                    ><img
-                      class="icon"
-                      src="../imagens/mao-aberta.png"
-                      alt="papel"
-                  /></a>
-                </li>
-                <li>
-                  <a id="computador_escolha_3"
-                    ><img
-                      class="icon"
-                      src="../imagens/tesoura.png"
-                      alt="tesoura"
-                  /></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div id="mensagens">....</div>
+          <ul id="jogador_escolha">
+            <li>
+              <a id="jogador_escolha_1" onclick="jogar(1)"
+                ><img class="icon" src="../imagens/pedral.png" alt="pedra"
+              /></a>
+            </li>
+            <li>
+              <a id="jogador_escolha_2" onclick="jogar(2)"
+                ><img class="icon" src="../imagens/mao-aberta.png" alt="papel"
+              /></a>
+            </li>
+            <li>
+              <a id="jogador_escolha_3" onclick="jogar(3)"
+                ><img class="icon" src="../imagens/tesoura.png" alt="tesoura"
+              /></a>
+            </li>
+          </ul>
         </div>
+        <div id="versus">VS</div>
+        <div id="computador">
+          <h2 id="computador_nome">Computador</h2>
+          <span id="computador_pontos">0</span>
 
-        <script src="./script.js"></script>
-      </body>
-    </html>
+          <ul id="computador_escolha">
+            <li>
+              <a id="computador_escolha_1"
+                ><img class="icon" src="../imagens/pedral.png" alt="pedra"
+              /></a>
+            </li>
+            <li>
+              <a id="computador_escolha_2"
+                ><img class="icon" src="../imagens/mao-aberta.png" alt="papel"
+              /></a>
+            </li>
+            <li>
+              <a id="computador_escolha_3"
+                ><img class="icon" src="../imagens/tesoura.png" alt="tesoura"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="mensagens">....</div>
+    </div>
 
-   
+    <script src="./script.js"></script>
+  </body>
+</html>

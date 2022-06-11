@@ -1,25 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "DEBUG FREE TRIAL";
-
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   color: #fff;
-  transition: 1s;
+  transition: 0.4s;
 
 }
+
 #container {
   height: 100vh;
-  background: url("./imagens/fundo.jpg") no-repeat;
-  background-size: cover;
+  background:#0c2461;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
 #menu_jogos {
-  width: 40%;
-  height: 80%;
+  width: 80%;
+  height: 60%;
   background: rgba(0, 00, 000, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
@@ -38,15 +37,10 @@
   justify-content: center;
 
 }
-#lets {
-  position: absolute;
-  left: 18%;
-  top: 1%;
-  font-size: 70px;
 
-}
 #logo {
-  font-size: 120px;
+  font-size: 60px;
+  border-bottom: #fff solid 2px;
 }
 /* #controle {
 } */
@@ -56,14 +50,11 @@
   margin: 0 auto;
   text-align: center;
   font-size: 50px;
-  border: dotted #fff 1px;
 
 }
 #body_jogos span {
 width: 100px;
   border-bottom: solid 1px #fff;
-
-
 }
 
 
@@ -80,4 +71,15 @@ width: 100px;
     color: cadetblue;
     cursor: pointer;
     
+}
+.menu {
+  display:flex ;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu a{
+  width: 130px;
+  margin-top: 25px;
+
 }
